@@ -1,0 +1,3 @@
+frond_office_homepage:
+    path:     /
+    defaults: { _controller: FrondOfficeBundle:Default:index }
