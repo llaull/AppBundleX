@@ -26,74 +26,8 @@ License: You must have a valid license purchased only from themeforest(the above
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
     <meta content="" name="description"/>
     <meta content="" name="author"/>
-    <!-- BEGIN GLOBAL MANDATORY STYLES -->
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet"
-          type="text/css"/>
 
-    {% stylesheets
-    '@BackOfficeBundle/Resources/public/assets/global/plugins/font-awesome/css/font-awesome.css'
-    output='assets/global/plugins/font-awesome/css/font-awesome.css' %}
-    <link rel="stylesheet" href="{{ asset_url }}" type="text/css"/>
-    {% endstylesheets %}
-
-    {% stylesheets
-    '@BackOfficeBundle/Resources/public/assets/global/plugins/simple-line-icons/simple-line-icons.min.css'
-    output='assets/global/plugins/simple-line-icons/simple-line-icons.min.css' %}
-    <link rel="stylesheet" href="{{ asset_url }}" type="text/css"/>
-    {% endstylesheets %}
-
-    {% stylesheets
-    '@BackOfficeBundle/Resources/public/assets/global/plugins/bootstrap/css/bootstrap.min.css'
-    output='assets/global/plugins/bootstrap/css/bootstrap.min.css' %}
-    <link rel="stylesheet" href="{{ asset_url }}" type="text/css"/>
-    {% endstylesheets %}
-
-    {% stylesheets
-    '@BackOfficeBundle/Resources/public/assets/global/plugins/uniform/css/uniform.default.css'
-    output='assets/global/plugins/uniform/css/uniform.default.css' %}
-    <link rel="stylesheet" href="{{ asset_url }}" type="text/css"/>
-    {% endstylesheets %}
-
-    {% stylesheets
-    '@BackOfficeBundle/Resources/public/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css'
-    output='assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css' %}
-    <link rel="stylesheet" href="{{ asset_url }}" type="text/css"/>
-    {% endstylesheets %}
-    <!-- END GLOBAL MANDATORY STYLES -->
-
-    <!-- BEGIN THEME GLOBAL STYLES -->
-    {% stylesheets
-    '@BackOfficeBundle/Resources/public/assets/global/css/components.min.css'
-    output='assets/global/css/components.min.css' %}
-    <link rel="stylesheet" href="{{ asset_url }}" type="text/css" id="style_components"/>
-    {% endstylesheets %}
-
-    {% stylesheets
-    '@BackOfficeBundle/Resources/public/assets/global/css/plugins.min.css'
-    output='assets/global/css/plugins.min.css' %}
-    <link rel="stylesheet" href="{{ asset_url }}" type="text/css"/>
-    {% endstylesheets %}
-    <!-- END THEME GLOBAL STYLES -->
-
-
-    <!-- BEGIN THEME LAYOUT STYLES -->
-    {% stylesheets
-    '@BackOfficeBundle/Resources/public/assets/layouts/layout/css/layout.min.css'
-    output='assets/layouts/layout/css/layout.min.css' %}
-    <link rel="stylesheet" href="{{ asset_url }}" type="text/css"/>
-    {% endstylesheets %}
-    {% stylesheets
-    '@BackOfficeBundle/Resources/public/assets/layouts/layout/css/themes/darkblue.min.css'
-    output='assets/layouts/layout/css/themes/darkblue.min.css' %}
-    <link rel="stylesheet" href="{{ asset_url }}" type="text/css"/>
-    {% endstylesheets %}
-    {% stylesheets
-    '@BackOfficeBundle/Resources/public/assets/layouts/layout/css/custom.min.css'
-    output='assets/layouts/layout/css/custom.min.css' %}
-    <link rel="stylesheet" href="{{ asset_url }}" type="text/css"/>
-    {% endstylesheets %}
-    <!-- END THEME LAYOUT STYLES -->
-
+    {% include 'BackOfficeBundle:Metronic:header-css.html.twig' %}
 
     <link rel="shortcut icon" href="favicon.ico"/>
 </head>
@@ -244,9 +178,9 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <a href="#">
                                                 <span class="photo">
                                                     {% image '@BackOfficeBundle/Resources/public/assets/layouts/layout/img/avatar2.jpg' %}
-                                                    <img src="{{ asset_url }}"/>
+                                                    <img src="{{ asset_url }}" class="img-circle" alt=""/>
                                                     {% endimage %}
-                                                    class="img-circle" alt=""> </span>
+                                                     </span>
                                                 <span class="subject">
                                                     <span class="from"> Lisa Wong </span>
                                                     <span class="time">Just Now </span>
@@ -258,9 +192,9 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <a href="#">
                                                 <span class="photo">
                                                     {% image '@BackOfficeBundle/Resources/public/assets/layouts/layout/img/avatar3.jpg' %}
-                                                    <img src="{{ asset_url }}"/>
+                                                    <img src="{{ asset_url }}" class="img-circle" alt=""/>
                                                     {% endimage %}
-                                                    class="img-circle" alt=""> </span>
+                                               </span>
                                                 <span class="subject">
                                                     <span class="from"> Richard Doe </span>
                                                     <span class="time">16 mins </span>
@@ -272,9 +206,9 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <a href="#">
                                                 <span class="photo">
                                                      {% image '@BackOfficeBundle/Resources/public/assets/layouts/layout/img/avatar1.jpg' %}
-                                                    <img src="{{ asset_url }}"/>
+                                                    <img src="{{ asset_url }}" class="img-circle" alt="">
                                                     {% endimage %}
-                                                    class="img-circle" alt=""> </span>
+                                                    </span>
                                                 <span class="subject">
                                                     <span class="from"> Bob Nilson </span>
                                                     <span class="time">2 hrs </span>
@@ -286,9 +220,9 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <a href="#">
                                                 <span class="photo">
                                                     {% image '@BackOfficeBundle/Resources/public/assets/layouts/layout/img/avatar2.jpg' %}
-                                                    <img src="{{ asset_url }}"/>
+                                                    <img src="{{ asset_url }}" class="img-circle" alt="">
                                                     {% endimage %}
-                                                    class="img-circle" alt=""> </span>
+                                                    </span>
                                                 <span class="subject">
                                                     <span class="from"> Lisa Wong </span>
                                                     <span class="time">40 mins </span>
@@ -300,9 +234,9 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <a href="#">
                                                 <span class="photo">
                                                      {% image '@BackOfficeBundle/Resources/public/assets/layouts/layout/img/avatar3.jpg' %}
-                                                    <img src="{{ asset_url }}"/>
+                                                    <img src="{{ asset_url }}" class="img-circle" alt=""/>
                                                     {% endimage %}
-                                                    class="img-circle" alt=""> </span>
+                                                    </span>
                                                 <span class="subject">
                                                     <span class="from"> Richard Doe </span>
                                                     <span class="time">46 mins </span>
