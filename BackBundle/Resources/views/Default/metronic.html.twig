@@ -1,8 +1,9 @@
-{% extends 'BackOfficeBundle:Metronic:body-page-content.html.twig' %}
+{% extends 'BackOfficeBundle:Metronic:body-page-content-blank.html.twig' %}
 
-{% block moreCss %}<link rel="shortcut icon" href="favicoddddn.ico"/>{% endblock moreCss %}
-{% block moreJs %}s{% endblock moreJs %}
+{% block moreCss %}{% endblock moreCss %}
+{% block moreJs %}{% endblock moreJs %}
 
+{% set title_page = 'Blank Page Layout' %}
 
-{% block title %}qsqsqs{% endblock title %}
-{% block titleq %}^dlkjdlkdf lkdfk  {% endblock titleq %}
+{% block content_txt %}<p>A black page template with a minimal dependency assets to use as a base for any custom page
+    you create </p>{% endblock content_txt %}
