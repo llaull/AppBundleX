@@ -5,12 +5,12 @@
         {% image '@BackOfficeBundle/Resources/public/assets/layouts/layout/img/avatar3_small.jpg' %}
         <img src="{{ asset_url }}" alt="" class="img-circle"/>
         {% endimage %}
-        <span class="username username-hide-on-mobile"> Nick </span>
+        <span class="username username-hide-on-mobile"> {{ app.user.username }} </span>
         <i class="fa fa-angle-down"></i>
     </a>
     <ul class="dropdown-menu dropdown-menu-default">
         <li>
-            <a href="page_user_profile_1.html">
+            <a href="{{ path('fos_user_profile_show') }}">
                 <i class="icon-user"></i> {{ 'My Profile'|trans }} </a>
         </li>
         {#<li>#}
@@ -35,7 +35,7 @@
                 <i class="icon-lock"></i> {{ 'Lock Screen'|trans }} </a>
         </li>
         <li>
-            <a href="page_user_login_1.html">
+            <a href="{{ path('fos_user_security_logout') }}">
                 <i class="icon-key"></i> {{ 'Log Out'|trans }}  </a>
         </li>
     </ul>

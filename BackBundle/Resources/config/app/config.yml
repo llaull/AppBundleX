@@ -40,8 +40,3 @@ assetic:
         simple-line-icons-woff:
             inputs: '%kernel.root_dir%/../src/AppBundle/BackBundle/Resources/public/assets/global/plugins/simple-line-icons/fonts/Simple-Line-Icons.woff'
             output: 'assets/global/plugins/simple-line-icons/fonts/Simple-Line-Icons.woff'
-
-fos_user:
-    db_driver: orm
-    firewall_name: main
-    user_class: AppBundle\BackBundle\Entity\User
