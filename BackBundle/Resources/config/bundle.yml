@@ -5,9 +5,12 @@ assetic:
         cssrewrite: ~
     assets:
 #        images des css
-        font-awesome-otf:
+        sidebar_toggler_icon_darkblue:
             inputs: '%kernel.root_dir%/../src/AppBundle/BackBundle/Resources/public/assets/layouts/layout/img/sidebar_toggler_icon_darkblue.png'
             output: 'assets/layouts/layout/img/sidebar_toggler_icon_darkblue.png'
+        sprite:
+            inputs: '%kernel.root_dir%/../src/AppBundle/BackBundle/Resources/public/assets/global/plugins/uniform/images/sprite.png'
+            output: 'assets/global/plugins/uniform/images/sprite.png'
 
         font-awesome-otf:
             inputs: '%kernel.root_dir%/../src/AppBundle/BackBundle/Resources/public/assets/global/plugins/font-awesome/fonts/FontAwesome.otf'

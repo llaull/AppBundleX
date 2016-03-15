@@ -1,0 +1,7 @@
+security.login.username: blblbl
+security.login.password: __security.login.password
+security.login.remember_me: r
+security.login.submit: go!
+'My Profile': '__My Profile'
+'Lock Screen': '__Lock Screen'
+'Log Out': '__Log Out'
