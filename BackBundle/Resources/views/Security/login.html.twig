@@ -1,16 +1,6 @@
 {% trans_default_domain 'AppBundleMessage' %}
 <!DOCTYPE html>
-<!-- 
-Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.5
-Version: 4.5
-Author: KeenThemes
-Website: http://www.keenthemes.com/
-Contact: support@keenthemes.com
-Follow: www.twitter.com/keenthemes
-Like: www.facebook.com/keenthemes
-Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
-License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
--->
+
 <!--[if IE 8]>
 <html lang="en" class="ie8 no-js"> <![endif]-->
 <!--[if IE 9]>
@@ -18,14 +8,13 @@ License: You must have a valid license purchased only from themeforest(the above
 <!--[if !IE]><!-->
 <html lang="en">
 <!--<![endif]-->
-<!-- BEGIN HEAD -->
-
+{#<!-- BEGIN HEAD -->#}
 <head>
     <meta charset="utf-8"/>
     <title>Back Office | Admin Login </title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
-    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    {#<!-- BEGIN GLOBAL MANDATORY STYLES -->#}
     <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet"
           type="text/css"/>
     {% stylesheets
@@ -57,8 +46,8 @@ License: You must have a valid license purchased only from themeforest(the above
     output='assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css' %}
     <link rel="stylesheet" href="{{ asset_url }}" type="text/css"/>
     {% endstylesheets %}
-    <!-- END GLOBAL MANDATORY STYLES -->
-    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    {#<!-- END GLOBAL MANDATORY STYLES -->#}
+    {#<!-- BEGIN PAGE LEVEL PLUGINS -->#}
     {% stylesheets
     '@BackOfficeBundle/Resources/public/assets/global/plugins/select2/css/select2.min.css'
     output='assets/global/plugins/select2/css/select2.min.css' %}
@@ -71,8 +60,8 @@ License: You must have a valid license purchased only from themeforest(the above
     <link rel="stylesheet" href="{{ asset_url }}" type="text/css"/>
     {% endstylesheets %}
 
-    <!-- END PAGE LEVEL PLUGINS -->
-    <!-- BEGIN THEME GLOBAL STYLES -->
+    {#<!-- END PAGE LEVEL PLUGINS -->#}
+    {#<!-- BEGIN THEME GLOBAL STYLES -->#}
     {% stylesheets
     '@BackOfficeBundle/Resources/public/assets/global/css/components.min.css'
     output='assets/global/css/components.min.css' %}
@@ -84,35 +73,38 @@ License: You must have a valid license purchased only from themeforest(the above
     output='assets/global/css/plugins.min.css' %}
     <link rel="stylesheet" href="{{ asset_url }}" type="text/css"/>
     {% endstylesheets %}
-    <!-- END THEME GLOBAL STYLES -->
-    <!-- BEGIN PAGE LEVEL STYLES -->
+    {#<!-- END THEME GLOBAL STYLES -->#}
+    {#<!-- BEGIN PAGE LEVEL STYLES -->#}
     {% stylesheets
     '@BackOfficeBundle/Resources/public/assets/pages/css/login-3.min.css'
     output='assets/pages/css/login-3.min.css' %}
     <link rel="stylesheet" href="{{ asset_url }}" type="text/css"/>
     {% endstylesheets %}
-    <!-- END PAGE LEVEL STYLES -->
-    <!-- BEGIN THEME LAYOUT STYLES -->
-    <!-- END THEME LAYOUT STYLES -->
-    <link rel="shortcut icon" href="favicon.ico"/>
+    {#<!-- END PAGE LEVEL STYLES -->#}
+    {#<!-- BEGIN THEME LAYOUT STYLES -->#}
+    {#<!-- END THEME LAYOUT STYLES -->#}
+    {% image
+    '@BackOfficeBundle/Resources/public/images/favicon.ico' %}
+    <link rel="shortcut icon" href="{{ asset_url }}"/>
+    {% endimage %}
 </head>
-<!-- END HEAD -->
+{#<!-- END HEAD -->#}
 
 <body class=" login">
-<!-- BEGIN LOGO -->
+{#<!-- BEGIN LOGO -->#}
 <div class="logo">
-    <a href="index.html">
+    <a href="{{ path('frond_office_homepage') }}">
         {% image '@BackOfficeBundle/Resources/public/assets/layouts/layout/img/logo.png' %}
         <img src="{{ asset_url }}" alt="logo" class="logo-default"/>
         {% endimage %} </a>
 </div>
-<!-- END LOGO -->
-<!-- BEGIN LOGIN -->
+{#<!-- END LOGO -->#}
+{#<!-- BEGIN LOGIN -->#}
 <div class="content">
-    <!-- BEGIN LOGIN FORM -->
+    {#<!-- BEGIN LOGIN FORM -->#}
     <form class="login-form" action="{{ path("fos_user_security_check") }}" method="post">
-        <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
-        <h3 class="form-title">Login to your account</h3>
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token }}"/>
+        <h3 class="form-title">{{ 'Login to your account'|trans }}</h3>
         {% if error %}
             <div class="alert alert-danger">
                 <button class="close" data-close="alert"></button>
@@ -120,32 +112,35 @@ License: You must have a valid license purchased only from themeforest(the above
             </div>
         {% endif %}
         <div class="form-group">
-            <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+            {#<!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->#}
             <label class="control-label visible-ie8 visible-ie9">{{ 'security.login.username'|trans }}</label>
             <div class="input-icon">
                 <i class="fa fa-user"></i>
-                <input class="form-control placeholder-no-fix" type="text" id="username" name="_username" placeholder="username" value="{{ last_username }}" required="required" /> </div>
+                <input class="form-control placeholder-no-fix" type="text" id="username" name="_username"
+                       placeholder="{{ 'username'|trans }}" value="{{ last_username }}" required="required"/></div>
         </div>
         <div class="form-group">
             <label class="control-label visible-ie8 visible-ie9">{{ 'security.login.password'|trans }}</label>
             <div class="input-icon">
                 <i class="fa fa-lock"></i>
-                <input class="form-control placeholder-no-fix" type="password" autocomplete="off" placeholder="Password" id="password" name="_password" required="required" /> </div>
+                <input class="form-control placeholder-no-fix" type="password" autocomplete="off"
+                       placeholder="{{ 'Password'|trans }}" id="password" name="_password" required="required"/></div>
         </div>
         <div class="form-actions">
             <label class="checkbox">
-                <input type="checkbox" id="remember_me" name="_remember_me" value="on" /> {{ 'security.login.remember_me'|trans }} </label>
-            <button type="submit" id="_submit" name="_submit" class="btn green pull-right"> {{ 'security.login.submit'|trans }} </button>
+                <input type="checkbox" id="remember_me" name="_remember_me"
+                       value="on"/> {{ 'security.login.remember_me'|trans }} </label>
+            <button type="submit" id="_submit" name="_submit"
+                    class="btn green pull-right"> {{ 'security.login.submit'|trans }} </button>
         </div>
         <div class="forget-password">
-            <h4>Forgot your password ?</h4>
-            <p> no worries, click
-                <a href="javascript:;" id="forget-password"> here </a> to reset your password. </p>
+            <h4>{{ 'Forgot your password ?'|trans }}</h4>
+            <p>{{ 'no worries, click %link_start%here%link_end% to reset your password.' | trans({'%link_start%' : '<a href="'~path('fos_user_resetting_request')~'">', '%link_end%' : '</a>'}) | raw }}</p>
         </div>
     </form>
-    <!-- END LOGIN FORM -->
+    {#<!-- END LOGIN FORM -->#}
 </div>
-<!-- END LOGIN -->
+{#<!-- END LOGIN -->#}
 <!--[if lt IE 9]>
 {% javascripts
 '@BackOfficeBundle/Resources/public/assets/global/plugins/respond.min.js'
@@ -154,7 +149,7 @@ License: You must have a valid license purchased only from themeforest(the above
 {% endjavascripts %}
 <![endif]-->
 
-<!-- BEGIN CORE PLUGINS -->
+{#<!-- BEGIN CORE PLUGINS -->#}
 {% javascripts
 '@BackOfficeBundle/Resources/public/assets/global/plugins/jquery.min.js'
 '@BackOfficeBundle/Resources/public/assets/global/plugins/bootstrap/js/bootstrap.min.js'
@@ -168,22 +163,19 @@ License: You must have a valid license purchased only from themeforest(the above
 '@BackOfficeBundle/Resources/public/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js' %}
 <script src="{{ asset_url }}"></script>
 {% endjavascripts %}
-<!-- END CORE PLUGINS -->
-<!-- BEGIN PAGE LEVEL PLUGINS -->
-{#<script src="../assets/global/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>#}
-{#<script src="../assets/global/plugins/jquery-validation/js/additional-methods.min.js" type="text/javascript"></script>#}
-{#<script src="../assets/global/plugins/select2/js/select2.full.min.js" type="text/javascript"></script>#}
-<!-- END PAGE LEVEL PLUGINS -->
-<!-- BEGIN THEME GLOBAL SCRIPTS -->
+{#<!-- END CORE PLUGINS -->#}
+{#<!-- BEGIN PAGE LEVEL PLUGINS -->#}
+{#<!-- END PAGE LEVEL PLUGINS -->#}
+{#<!-- BEGIN THEME GLOBAL SCRIPTS -->#}
 {% javascripts
 '@BackOfficeBundle/Resources/public/assets/global/scripts/app.min.js' %}
 <script src="{{ asset_url }}"></script>
 {% endjavascripts %}
-<!-- END THEME GLOBAL SCRIPTS -->
-<!-- BEGIN PAGE LEVEL SCRIPTS -->
-<!-- END PAGE LEVEL SCRIPTS -->
-<!-- BEGIN THEME LAYOUT SCRIPTS -->
-<!-- END THEME LAYOUT SCRIPTS -->
+{#<!-- END THEME GLOBAL SCRIPTS -->#}
+{#<!-- BEGIN PAGE LEVEL SCRIPTS -->#}
+{#<!-- END PAGE LEVEL SCRIPTS -->#}
+{#<!-- BEGIN THEME LAYOUT SCRIPTS -->#}
+{#<!-- END THEME LAYOUT SCRIPTS -->#}
 </body>
 
 </html>

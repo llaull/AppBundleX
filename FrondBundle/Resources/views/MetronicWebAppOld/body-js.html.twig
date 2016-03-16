@@ -6,13 +6,17 @@
 {% endjavascripts %}
 <![endif]-->
 <!-- BEGIN CORE PLUGINS -->
-
 {% javascripts
 '@BackOfficeBundle/Resources/public/assets/global/plugins/jquery.min.js'
 '@BackOfficeBundle/Resources/public/assets/global/plugins/bootstrap/js/bootstrap.min.js'
 '@BackOfficeBundle/Resources/public/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js'
 '@BackOfficeBundle/Resources/public/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js'
 '@BackOfficeBundle/Resources/public/assets/global/plugins/jquery.blockui.min.js' %}
+<script src="{{ asset_url }}"></script>
+{% endjavascripts %}
+        {% javascripts
+        '@BackOfficeBundle/Resources/public/assets/global/plugins/uniform/jquery.uniform.min.js'
+        '@BackOfficeBundle/Resources/public/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js' %}
 <script src="{{ asset_url }}"></script>
 {% endjavascripts %}
 <!-- END CORE PLUGINS -->
@@ -24,17 +28,11 @@
 <!-- END THEME GLOBAL SCRIPTS -->
 <!-- BEGIN THEME LAYOUT SCRIPTS -->
 {% javascripts
-'@BackOfficeBundle/Resources/public/assets/layouts/layout/scripts/layout.min.js' %}
+'@BackOfficeBundle/Resources/public/assets/layouts/layout6/scripts/layout.min.min.js' %}
 <script src="{{ asset_url }}"></script>
 {% endjavascripts %}
-{% javascripts
-'@BackOfficeBundle/Resources/public/assets/layouts/layout/scripts/demo.min.js' %}
+        {% javascripts
+        '@BackOfficeBundle/Resources/public/assets/layouts/global/scripts/quick-sidebar.min.min.js' %}
 <script src="{{ asset_url }}"></script>
 {% endjavascripts %}
-{% javascripts
-'@BackOfficeBundle/Resources/public/assets/layouts/layout/scripts/quick-sidebar.min.js' %}
-<script src="{{ asset_url }}"></script>
-{% endjavascripts %}
-
 <!-- END THEME LAYOUT SCRIPTS -->
-
