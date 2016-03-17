@@ -3,3 +3,4 @@
 
  generer les fichiers
  php bin/console translation:update --dump-messages --output-format=xlf --force fr BackOfficeBundle
+ 
