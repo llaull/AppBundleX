@@ -1,4 +1,3 @@
 imports:
     - { resource: app/config.yml }
     - { resource: app/security.yml }
-    
