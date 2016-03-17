@@ -10,6 +10,12 @@
     {% endstylesheets %}
 
     {% stylesheets
+    '@BackOfficeBundle/Resources/public/assets/global/plugins/entypo/css/entypo.css'
+    output='assets/global/plugins/entypo/css/entypo.css' %}
+    <link rel="stylesheet" href="{{ asset_url }}" type="text/css"/>
+    {% endstylesheets %}
+
+    {% stylesheets
     '@BackOfficeBundle/Resources/public/assets/global/plugins/simple-line-icons/simple-line-icons.min.css'
     output='assets/global/plugins/simple-line-icons/simple-line-icons.min.css' %}
     <link rel="stylesheet" href="{{ asset_url }}" type="text/css"/>
