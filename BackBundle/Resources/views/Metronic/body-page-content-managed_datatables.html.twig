@@ -38,7 +38,7 @@
     {#<!-- END PAGE HEADER-->#}
     {#<div class="note note-info">#}
     <div class="row">
-        <div class="col-md-6 col-sm-12">
+        <div class="{{ table_size }}">
             <!-- BEGIN EXAMPLE TABLE PORTLET-->
             <div class="portlet light bordered">
                 <div class="portlet-title">
@@ -60,7 +60,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="btn-group">
-                                    <a id="sample_editable_1_new" class="btn sbold green" href="#">{{ 'Add New'|trans }} <i class="fa fa-plus"></i></a>
+                                    <a id="sample_editable_1_new" class="btn sbold green" href="{{ path( (path_entity_new) )  }}">{{ 'Add New'|trans }} <i class="fa fa-plus"></i></a>
                                 </div>
                             </div>
                             {#<div class="col-md-6">#}
