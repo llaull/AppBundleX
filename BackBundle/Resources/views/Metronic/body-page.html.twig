@@ -1,30 +1,30 @@
 {% extends 'BackOfficeBundle:Metronic:body.html.twig' %}
 {% block bodyPage %}
-    <!-- BEGIN CONTAINER -->
+    {#<!-- BEGIN CONTAINER -->#}
     <div class="page-container">
-        <!-- BEGIN SIDEBAR -->
+        {#<!-- BEGIN SIDEBAR -->#}
         <div class="page-sidebar-wrapper">
-            <!-- BEGIN SIDEBAR -->
+            {#<!-- BEGIN SIDEBAR -->#}
             <div class="page-sidebar navbar-collapse collapse">
-                <!-- BEGIN SIDEBAR MENU -->
+                {#<!-- BEGIN SIDEBAR MENU -->#}
                 {% include 'BackOfficeBundle:Metronic:body-page-menu.html.twig' %}
-                <!-- END SIDEBAR MENU -->
+                {#<!-- END SIDEBAR MENU -->#}
             </div>
-            <!-- END SIDEBAR -->
+            {#<!-- END SIDEBAR -->#}
         </div>
-        <!-- END SIDEBAR -->
-        <!-- BEGIN CONTENT -->
+        {#<!-- END SIDEBAR -->#}
+        {#<!-- BEGIN CONTENT -->#}
         <div class="page-content-wrapper">
-            <!-- BEGIN CONTENT BODY -->
+            {#<!-- BEGIN CONTENT BODY -->#}
             <div class="page-content">
-                <!-- BEGIN PAGE HEADER-->
-                <!-- BEGIN THEME PANEL -->
+                {#<!-- BEGIN PAGE HEADER-->#}
+                {#<!-- BEGIN THEME PANEL -->#}
                 {#{% include 'BackOfficeBundle:Metronic:body-page-customise.html.twig' %}#}
-                <!-- BEGIN PAGE BAR -->
+                {#<!-- BEGIN PAGE BAR -->#}
                 <div class="page-bar">
                     <ul class="page-breadcrumb">
                         <li>
-                            <a href="index.html">Home</a>
+                            <a href="{{ path('back_office_homepage') }}">{{ 'Home'|trans }}</a>
                             <i class="fa fa-circle"></i>
                         </li>
                         <li>
@@ -33,16 +33,16 @@
                     </ul>
                     {#{% include 'BackOfficeBundle:Metronic:body-page-toolbar.html.twig' %}#}
                 </div>
-                <!-- END PAGE BAR -->
-                <!-- BEGIN PAGE TITLE-->
+                {#<!-- END PAGE BAR -->#}
+                {#<!-- BEGIN PAGE TITLE-->#}
                 {% block pageContent %}{% endblock pageContent %}
             </div>
-            <!-- END CONTENT BODY -->
+            {#<!-- END CONTENT BODY -->#}
         </div>
-        <!-- END CONTENT -->
-        <!-- BEGIN QUICK SIDEBAR -->
+        {#<!-- END CONTENT -->#}
+        {#<!-- BEGIN QUICK SIDEBAR -->#}
         {% include 'BackOfficeBundle:Metronic:body-page-quick-slide.html.twig' %}
-        <!-- END QUICK SIDEBAR -->
+        {#<!-- END QUICK SIDEBAR -->#}
     </div>
-    <!-- END CONTAINER -->
+    {#<!-- END CONTAINER -->#}
 {% endblock bodyPage %}
