@@ -11,6 +11,10 @@ assetic:
         sprite:
             inputs: '%kernel.root_dir%/../src/AppBundle/BackBundle/Resources/public/assets/global/plugins/uniform/images/sprite.png'
             output: 'assets/global/plugins/uniform/images/sprite.png'
+        text-color:
+            inputs: '%kernel.root_dir%/../src/AppBundle/BackBundle/Resources/public/assets/global/plugins/tinycolorpicker/text-color.png'
+            output: 'assets/global/plugins/tinycolorpicker/text-color.png'
+
 #        sort-both:
 #            inputs: '%kernel.root_dir%/../src/AppBundle/BackBundle/Resources/public/assets/global/plugins/datatables/images/sort_both.png'
 #            output: 'assets/global/plugins/datatables/DataTables-1.10.8/images/sort_both.png'

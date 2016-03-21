@@ -74,19 +74,20 @@
         output='assets/layouts/layout6/css/custom.min.css' %}
         <link rel="stylesheet" href="{{ asset_url }}" type="text/css"/>
         {% endstylesheets %}
+        {% block moreCss %}{% endblock moreCss %}
         <!-- END THEME LAYOUT STYLES -->
         <link rel="shortcut icon" href="favicon.ico" /> </head>
-    <!-- END HEAD -->
+    {#<!-- END HEAD -->#}
 
     <body class="">
-        <!-- BEGIN HEADER -->
+        {#<!-- BEGIN HEADER -->#}
         {% include 'FrondOfficeBundle:MetronicWebApp:body-header.html.twig' %}
-        <!-- END HEADER -->
-        <!-- BEGIN CONTAINER -->
+        {#<!-- END HEADER -->#}
+        {#<!-- BEGIN CONTAINER -->#}
         {#{% include 'FrondOfficeBundle:MetronicWebApp:body-page-content.html.twig' %}#}
         {% block bodyPage %}{% endblock bodyPage %}
-        <!-- END CONTAINER -->
-        {% include 'FrondOfficeBundle:MetronicWebApp:body-quick-slidebar.html.twig' %}
+        {#<!-- END CONTAINER -->#}
+        {#{% include 'FrondOfficeBundle:MetronicWebApp:body-quick-slidebar.html.twig' %}#}
         <!--[if lt IE 9]>
         {% javascripts
         '@BackOfficeBundle/Resources/public/assets/global/plugins/respond.min.js'
@@ -94,7 +95,7 @@
         <script src="{{ asset_url }}"></script>
         {% endjavascripts %}
         <![endif]-->
-        <!-- BEGIN CORE PLUGINS -->
+        {#<!-- BEGIN CORE PLUGINS -->#}
         {% javascripts
         '@BackOfficeBundle/Resources/public/assets/global/plugins/jquery.min.js'
         '@BackOfficeBundle/Resources/public/assets/global/plugins/bootstrap/js/bootstrap.min.js'
@@ -125,7 +126,7 @@
         <script src="{{ asset_url }}"></script>
         {% endjavascripts %}
         <!-- END THEME LAYOUT SCRIPTS -->
-
+        {% block moreJs %}{% endblock moreJs %}
     </body>
 
 </html>
