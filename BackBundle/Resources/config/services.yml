@@ -1,4 +1,4 @@
 services:
-#    back_office.example:
-#        class: AppBundle\BackBundle\Example
-#        arguments: ["@service_id", "plain_value", %parameter%]
+    back_office.loging:
+        class: AppBundle\BackBundle\Services\LoggService
+        arguments: ["@service_container"]
