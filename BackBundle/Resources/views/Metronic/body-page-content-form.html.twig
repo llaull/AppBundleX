@@ -1,0 +1,51 @@
+{% extends 'BackOfficeBundle:Metronic:body-page.html.twig' %}
+
+{% block moreCss %}{% endblock moreCss %}
+{% block moreJs %}
+
+    {% javascripts
+    '@BackOfficeBundle/Resources/public/assets/pages/scripts/form-samples.min.js' %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+
+{% endblock moreJs %}
+
+{% block pageContent %}
+    {#<!-- BEGIN PAGE TITLE-->#}
+   <h3 class="page-title">  {{ title_page }}
+        {#<small>{{ title_page }}</small>#}
+    </h3>
+    {#<!-- END PAGE TITLE-->#}
+    {#<!-- END PAGE HEADER-->#}
+    {#<div class="note note-info">#}
+    <div class="row">
+        <div class="{{ table_size }}">
+            <div class="tabbable-line boxless tabbable-reversed">
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tab_0">
+                        <div class="portlet box green">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <i class="fa fa-gift"></i>Form Actions On Bottom </div>
+                                <div class="tools">
+                                    <a href="javascript:;" class="collapse"> </a>
+                                    <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+                                    <a href="javascript:;" class="reload"> </a>
+                                    <a href="javascript:;" class="remove"> </a>
+                                </div>
+                            </div>
+                            <div class="portlet-body form">
+                                <!-- BEGIN FORM-->
+                                {% block content_txt %}{% endblock content_txt %}
+                                <!-- END FORM-->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {#</div>#}
+{% endblock pageContent %}
