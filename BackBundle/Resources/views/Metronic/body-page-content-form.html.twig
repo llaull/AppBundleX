@@ -1,5 +1,6 @@
 {% extends 'BackOfficeBundle:Metronic:body-page.html.twig' %}
 
+{% form_theme form 'BackOfficeBundle:Default:bootstrap_3_horizontal_layout.html.twig' %}
 {% block moreCss %}{% endblock moreCss %}
 {% block moreJs %}
 
@@ -10,6 +11,14 @@
 
 {% endblock moreJs %}
 
+{#change le libeller si le formulaire et en edition#}
+{% if edit_form is defined %}
+    {% set submit_btn = 'Update'|trans %}
+{% else %}
+    {% set submit_btn = 'Create'|trans %}
+{% endif %}
+
+{#contenu form#}
 {% block pageContent %}
     {#<!-- BEGIN PAGE TITLE-->#}
    <h3 class="page-title">  {{ title_page }}
@@ -29,15 +38,28 @@
                                     <i class="fa fa-gift"></i>Form Actions On Bottom </div>
                                 <div class="tools">
                                     <a href="javascript:;" class="collapse"> </a>
-                                    <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+                                    {#<a href="#portlet-config" data-toggle="modal" class="config"> </a>#}
                                     <a href="javascript:;" class="reload"> </a>
-                                    <a href="javascript:;" class="remove"> </a>
+                                    {#<a href="javascript:;" class="remove"> </a>#}
                                 </div>
                             </div>
                             <div class="portlet-body form">
-                                <!-- BEGIN FORM-->
-                                {% block content_txt %}{% endblock content_txt %}
-                                <!-- END FORM-->
+                                {#<!-- BEGIN FORM-->#}
+                                {{ form_start(form) }}
+                                <div class="form-body">
+                                    {{ form_widget(form) }}
+                                </div>
+                                <div class="form-actions">
+                                    <div class="row">
+                                        <div class="col-md-offset-3 col-md-9">
+                                            <button type="submit" class="btn green">{{ submit_btn }}</button>
+                                            <a class="btn grey-salsa btn-outline" href="{{ path('admin_domotique_log_index') }}">{{ "Cancel"|trans }}</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {{ form_end(form) }}
+                                {#<!-- END FORM-->#}
                             </div>
                         </div>
                     </div>
@@ -47,5 +69,4 @@
         </div>
     </div>
 
-    {#</div>#}
 {% endblock pageContent %}
