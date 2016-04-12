@@ -129,4 +129,4 @@ fos_user:
 #            type: rest_user_profile
             type: AppBundle\BackBundle\Form\Type\ProfileFormType
             name: rest_user_profile
-            validation_groups:  [Profile, Default]
+#            validation_groups:  [Profile, Default]

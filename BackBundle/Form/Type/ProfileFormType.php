@@ -13,9 +13,11 @@ class ProfileFormType extends BaseType
         parent::buildUserForm($builder, $options);
 
         // custom field
-        $builder
-            ->add('firstname', null, array('label' => 'form.firstname', 'translation_domain' => 'AppBundleMessage'))
-            ->add('lastname', null, array('label' => 'form.lastname', 'translation_domain' => 'AppBundleMessage'));
+//        $builder
+//            ->add('firstname', null, array('label' => 'form.firstname', 'translation_domain' => 'AppBundleMessage'))
+//            ->add('lastname', null, array('label' => 'form.lastname', 'translation_domain' => 'AppBundleMessage'));
+
+        $builder->remove('password');
     }
 
 
