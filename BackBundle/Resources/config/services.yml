@@ -2,3 +2,22 @@ services:
     back_office.loging:
         class: AppBundle\BackBundle\Services\LoggService
         arguments: ["@service_container"]
+
+#    my_user.profile.form.type:
+#        class: AppBundle\BackBundle\Form\Type\ProfileFormType
+#        arguments: [%fos_user.model.user.class%]
+#        tags:
+#          - { name: form.type, alias: my_user_profile }
+#
+#    fos_user:
+#      profile:
+#        form:
+#          type: my_user_profile
+# https://openclassrooms.com/forum/sujet/fosuserbundle-modifier-formulaire-edit-user
+
+
+    ton_userbundle_profiletype:
+        class: AppBundle\BackBundle\Form\Type\UserType
+        arguments: [%fos_user.model.user.class%]
+        tags:
+           -  { name: profil.form.type }

@@ -1,0 +1,13 @@
+{% extends 'BackOfficeBundle:Metronic:body-page-content-form.html.twig' %}
+
+{#{% set form = edit_form %}#}
+{% set title_page = 'editer le profil' %}
+{% set path_entity_index = 'admin_domotique_module_index' %}
+{% set table_size = 'col-md-12' %}
+
+
+{% block content_txt %}
+    {% block fos_user_content %}
+        {% include "FOSUserBundle:Profile:edit_content.html.twig" %}
+    {% endblock fos_user_content %}
+{% endblock content_txt %}

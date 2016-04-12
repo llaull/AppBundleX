@@ -1,0 +1,12 @@
+{% extends 'BackOfficeBundle:Metronic:body-page-content-blank.html.twig' %}
+
+{% block moreCss %}{% endblock moreCss %}
+{% block moreJs %}{% endblock moreJs %}
+
+{% set title_page = 'edit profil' %}
+
+{% block content_txt %}
+    {% block fos_user_content %}
+        {% include "@BackOffice/Profile/edit_content.html.twig" %}
+    {% endblock fos_user_content %}
+{% endblock content_txt %}
