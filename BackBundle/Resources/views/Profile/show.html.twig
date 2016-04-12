@@ -3,10 +3,10 @@
 {% block moreCss %}{% endblock moreCss %}
 {% block moreJs %}{% endblock moreJs %}
 
-{% set title_page = 'edit profil' %}
+{% set title_page = 'show profil' %}
 
 {% block content_txt %}
     {% block fos_user_content %}
-        {% include "@BackOffice/Profile/edit_content.html.twig" %}
+        {% include "@BackOffice/Profile/show_content.html.twig" %}
     {% endblock fos_user_content %}
 {% endblock content_txt %}

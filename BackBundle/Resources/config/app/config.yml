@@ -126,4 +126,7 @@ fos_user:
     # modification formulaire de modification
     profile:
         form:
-            type: ton_userbundle_profiletype
+#            type: rest_user_profile
+            type: AppBundle\BackBundle\Form\Type\ProfileFormType
+            name: rest_user_profile
+            validation_groups:  [Profile, Default]

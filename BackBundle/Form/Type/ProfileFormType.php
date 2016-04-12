@@ -12,17 +12,16 @@ class ProfileFormType extends BaseType
     {
         parent::buildUserForm($builder, $options);
 
-        die(var_dump('d'));
         // custom field
         $builder
-            ->add('firstname', null, array('label' => 'form.firstname', 'translation_domain' => 'FOSUserBundle'))
-            ->add('lastname', null, array('label' => 'form.lastname', 'translation_domain' => 'FOSUserBundle'));
+            ->add('firstname', null, array('label' => 'form.firstname', 'translation_domain' => 'AppBundleMessage'))
+            ->add('lastname', null, array('label' => 'form.lastname', 'translation_domain' => 'AppBundleMessage'));
     }
 
 
     public function getName()
     {
-        return 'ton_userbundle_profiletype';
+        return 'rest_user_profile';
     }
 
 }
