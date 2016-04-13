@@ -26,16 +26,15 @@ class ProfileFormTest extends WebTestCase
         $form = $crawler->selectButton('Create')->form(array(
             'rest_user_profile[firstname]'  => 'plup',
             'rest_user_profile[lastname]'  => 'plap',
+            'rest_user_profile[email]' => 'plup@gmail.com',
             'rest_user_profile[current_password]'  => 'test',
         ));
 
         $client->submit($form);
-        //var_dump($crawler);
         $crawler = $client->followRedirect();
-      //  var_dump($client->getResponse()->getContent());
 
         // Check data in the show view
-        $this->assertGreaterThan(0, $crawler->filter('p:contains("test")')->count(), 'Missing element td:contains("test")');
+        $this->assertGreaterThan(0, $crawler->filter('p:contains("plup@gmail.com")')->count(), 'Missing element td:contains("test")');
 
     }
 }
