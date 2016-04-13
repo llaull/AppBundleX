@@ -1,10 +1,19 @@
 {% trans_default_domain 'AppBundleMessage' %}
-<!-- BEGIN USER PROFILE -->
+
+{# gestion des avatars #}
+{% if app.user.avatar is empty %}
+    {% image '@BackOfficeBundle/Resources/public/assets/layouts/layout/img/avatar3_small.jpg' %}
+    {% set avatar = asset_url %}
+    {% endimage %}
+{% else %}
+    {% set avatar = app.user.avatar %}
+{% endif %}
+
+{#<!-- BEGIN USER PROFILE -->#}
 <div class="btn-group-img btn-group">
     <button type="button" class="btn btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-        {% image '@BackOfficeBundle/Resources/public/assets/layouts/layout6/img/avatar1.jpg' %}
-        <img src="{{ asset_url }}" alt="" class="img-circle"/>
-        {% endimage %} </button>
+        <img src="{{ avatar }}" alt="" class="img-circle"/>
+       </button>
     <ul class="dropdown-menu-v2" role="menu">
         <li>
             <a href="{{ path('fos_user_profile_show') }}">
@@ -39,5 +48,5 @@
         </li>
     </ul>
 </div>
-<!-- END USER PROFILE -->
+{#<!-- END USER PROFILE -->#}
 </div>

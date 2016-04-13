@@ -1,11 +1,19 @@
 {% trans_default_domain 'AppBundleMessage' %}
+
+{# gestion des avatars #}
+{% if app.user.avatar is empty %}
+    {% image '@BackOfficeBundle/Resources/public/assets/layouts/layout/img/avatar3_small.jpg' %}
+        {% set avatar = asset_url %}
+    {% endimage %}
+{% else %}
+    {% set avatar = app.user.avatar %}
+{% endif %}
+
 {#<!-- BEGIN USER LOGIN DROPDOWN -->#}
 <li class="dropdown dropdown-user">
     <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
        data-close-others="true">
-        {% image '@BackOfficeBundle/Resources/public/assets/layouts/layout/img/avatar3_small.jpg' %}
-        <img src="{{ asset_url }}" alt="" class="img-circle"/>
-        {% endimage %}
+        <img src="{{ avatar }}" alt="" class="img-circle"/>
         <span class="username username-hide-on-mobile"> {{ app.user.username }} </span>
         <i class="fa fa-angle-down"></i>
     </a>
