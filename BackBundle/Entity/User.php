@@ -23,16 +23,39 @@ class User extends BaseUser
      * @ORM\Column(name="lastname", type="string", length=100, nullable=true)
      */
     protected $lastname;
+
     /**
      * @var string
      * @ORM\Column(name="firstname", type="string", length=100, nullable=true)
      */
     protected $firstname;
 
+    /**
+     * @var string
+     * @ORM\Column(name="avatar", type="string", length=250, nullable=true)
+     */
+    protected $avatar;
+
     public function __construct()
     {
         parent::__construct();
         // your own logic
+    }
+
+    /**
+     * @return string
+     */
+    public function getAvatar()
+    {
+        return $this->avatar;
+    }
+
+    /**
+     * @param string $avatar
+     */
+    public function setAvatar($avatar)
+    {
+        $this->avatar = $avatar;
     }
 
     /**

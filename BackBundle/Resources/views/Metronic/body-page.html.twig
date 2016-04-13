@@ -1,5 +1,6 @@
 {% extends 'BackOfficeBundle:Metronic:body.html.twig' %}
 {% block bodyPage %}
+    {% block moreJsBefore %}{% endblock moreJsBefore %}
     {#<!-- BEGIN CONTAINER -->#}
     <div class="page-container">
         {#<!-- BEGIN SIDEBAR -->#}
@@ -41,6 +42,7 @@
                 </div>
                 {#<!-- END PAGE BAR -->#}
                 {#<!-- BEGIN PAGE TITLE-->#}
+
                 {% block pageContent %}{% endblock pageContent %}
             </div>
             {#<!-- END CONTENT BODY -->#}

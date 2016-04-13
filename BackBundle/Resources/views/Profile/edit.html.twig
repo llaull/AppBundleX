@@ -1,5 +1,11 @@
 {% extends 'BackOfficeBundle:Metronic:body-page-content-form.html.twig' %}
 
+    {% block moreJsBefore %}
+        {% javascripts
+        '@BackOfficeBundle/Resources/public/assets/global/plugins/jquery.min.js' %}
+        <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+    {% endblock moreJsBefore %}
 {#{% set form = edit_form %}#}
 {% set title_page = 'editer un profil' %}
 {% set path_entity_index = 'admin_domotique_module_index' %}
