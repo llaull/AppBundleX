@@ -1,3 +1,7 @@
+twig:
+    globals:
+        webcams: %webcams%
+
 assetic:
     debug:          '%kernel.debug%'
     use_controller: '%kernel.debug%'
