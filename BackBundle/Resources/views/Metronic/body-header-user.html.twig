@@ -2,7 +2,7 @@
 
 {# gestion des avatars #}
 {% if app.user.avatar is empty %}
-    {% image '@BackOfficeBundle/Resources/public/assets/layouts/layout/img/avatar3_small.jpg' %}
+    {% image '@BackOfficeBundle/Resources/public/assets/layouts/layout/img/avatar.png' %}
         {% set avatar = asset_url %}
     {% endimage %}
 {% else %}

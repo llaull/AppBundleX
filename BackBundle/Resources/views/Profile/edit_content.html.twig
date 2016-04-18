@@ -4,17 +4,17 @@
 
 {# gestion des avatars #}
 {% if app.user.avatar is empty %}
-    {% image '@BackOfficeBundle/Resources/public/assets/layouts/layout/img/avatar3_small.jpg' %}
+    {% image '@BackOfficeBundle/Resources/public/assets/layouts/layout/img/avatar.png' %}
     {% set avatar = asset_url %}
     {% endimage %}
 {% else %}
     {% set avatar = app.user.avatar %}
 {% endif %}
 
-<!-- BEGIN PROFILE SIDEBAR -->
+{#<!-- BEGIN PROFILE SIDEBAR -->#}
 {% include "@BackOffice/Profile/profil-sidebar.html.twig" %}
-<!-- END BEGIN PROFILE SIDEBAR -->
-<!-- BEGIN PROFILE CONTENT -->
+{#<!-- END BEGIN PROFILE SIDEBAR -->#}
+{#<!-- BEGIN PROFILE CONTENT -->#}
 <div class="profile-content">
     <div class="row">
         <div class="col-md-12">
@@ -38,7 +38,7 @@
                 </div>
                 <div class="portlet-body">
                     <div class="tab-content">
-                        <!-- PERSONAL INFO TAB -->
+                        {#<!-- PERSONAL INFO TAB -->#}
                         <div class="tab-pane active" id="tab_1_1">
                             {{ form_start(form) }}
                             <div class="form-body">
@@ -55,8 +55,8 @@
 
                             {{ form_end(form) }}
                         </div>
-                        <!-- END PERSONAL INFO TAB -->
-                        <!-- CHANGE PASSWORD TAB -->
+                        {#<!-- END PERSONAL INFO TAB -->#}
+                        {#<!-- CHANGE PASSWORD TAB -->#}
                         <div class="tab-pane" id="tab_1_3">
                             <form action="#">
                                 <div class="form-group">
@@ -74,8 +74,8 @@
                                 </div>
                             </form>
                         </div>
-                        <!-- END CHANGE PASSWORD TAB -->
-                        <!-- PRIVACY SETTINGS TAB -->
+                        {#<!-- END CHANGE PASSWORD TAB -->#}
+                        {#<!-- PRIVACY SETTINGS TAB -->#}
                         <div class="tab-pane" id="tab_1_4">
                             <form action="#">
                                 <table class="table table-light table-hover">
@@ -110,18 +110,18 @@
                                         </td>
                                     </tr>
                                 </table>
-                                <!--end profile-settings-->
+                                {#<!--end profile-settings-->#}
                                 <div class="margin-top-10">
                                     <a href="javascript:;" class="btn red"> Save Changes </a>
                                     <a href="javascript:;" class="btn default"> Cancel </a>
                                 </div>
                             </form>
                         </div>
-                        <!-- END PRIVACY SETTINGS TAB -->
+                        {#<!-- END PRIVACY SETTINGS TAB -->#}
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- END PROFILE CONTENT -->
+{#<!-- END PROFILE CONTENT -->#}

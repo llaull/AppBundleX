@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-  <file source-language="fr" target-language="fr" datatype="plaintext" original="file.ext">
+<?xml version="1.0" encoding="utf-8"?><xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file datatype="plaintext" original="file.ext" source-language="fr" target-language="fr">
     <header>
       <tool tool-id="symfony" tool-name="Symfony"/>
     </header>
@@ -52,62 +51,6 @@
       <trans-unit id="57da2e3d08119d9a83a186d9213fa9fe" resname="no worries, click %link_start%here%link_end% to reset your password.">
         <source>no worries, click %link_start%here%link_end% to reset your password.</source>
         <target state="translated">T'inquiète, clique %link_start%ici%link_end% pour en recevoir un autre.</target>
-      </trans-unit>
-      <trans-unit id="06933067aafd48425d67bcb01bba5cb6" resname="Update">
-        <source>Update</source>
-        <target>__Update</target>
-      </trans-unit>
-      <trans-unit id="686e697538050e4664636337cc3b834f" resname="Create">
-        <source>Create</source>
-        <target>__Create</target>
-      </trans-unit>
-      <trans-unit id="ea4788705e6873b424c65e91c2846b19" resname="Cancel">
-        <source>Cancel</source>
-        <target>__Cancel</target>
-      </trans-unit>
-      <trans-unit id="de9ced9bf5e9829de4a93ad8c9d7a170" resname="Add New">
-        <source>Add New</source>
-        <target>__Add New</target>
-      </trans-unit>
-      <trans-unit id="8cf04a9734132302f96da8e113e80ce5" resname="Home">
-        <source>Home</source>
-        <target>__Home</target>
-      </trans-unit>
-      <trans-unit id="972d3272be925f3d1f3b7c7709b6a84c" resname="Profile Account">
-        <source>Profile Account</source>
-        <target>__Profile Account</target>
-      </trans-unit>
-      <trans-unit id="952a2efe1be422bd61edb06a3b931988" resname="Personal Info">
-        <source>Personal Info</source>
-        <target>__Personal Info</target>
-      </trans-unit>
-      <trans-unit id="8f1e77e0d2be21da93cd4d9a939148f7" resname="Change Password">
-        <source>Change Password</source>
-        <target>__Change Password</target>
-      </trans-unit>
-      <trans-unit id="c9cc8cce247e49bae79f15173ce97354" resname="Save">
-        <source>Save</source>
-        <target>__Save</target>
-      </trans-unit>
-      <trans-unit id="3903aab323863bd2e9b68218a7a65ebd" resname="Follow">
-        <source>Follow</source>
-        <target>__Follow</target>
-      </trans-unit>
-      <trans-unit id="4c2a8fe7eaf24721cc7a9f0175115bd4" resname="Message">
-        <source>Message</source>
-        <target>__Message</target>
-      </trans-unit>
-      <trans-unit id="ff73074ccafb0bcfc1c49a09ceb6532f" resname="Account Settings">
-        <source>Account Settings</source>
-        <target>__Account Settings</target>
-      </trans-unit>
-      <trans-unit id="6a26f548831e6a8c26bfbbd9f6ec61e0" resname="Help">
-        <source>Help</source>
-        <target>__Help</target>
-      </trans-unit>
-      <trans-unit id="8f7f4c1ce7a4f933663d10543562b096" resname="About">
-        <source>About</source>
-        <target>__About</target>
       </trans-unit>
     </body>
   </file>

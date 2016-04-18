@@ -18,6 +18,10 @@ assetic:
         text-color:
             inputs: '%kernel.root_dir%/../src/AppBundle/BackBundle/Resources/public/assets/global/plugins/tinycolorpicker/text-color.png'
             output: 'assets/global/plugins/tinycolorpicker/text-color.png'
+        layout6_bg:
+            inputs: '%kernel.root_dir%/../src/AppBundle/BackBundle/Resources/public/assets/layouts/layout6/img/bg_01.jpg'
+            output: 'assets/layouts/layout6/img/bg_01.jpg'
+
 #       element portlet
         portlet-collapse-icon-white:
             inputs: '%kernel.root_dir%/../src/AppBundle/BackBundle/Resources/public/assets/global/img/portlet-collapse-icon-white.png'
