@@ -30,7 +30,7 @@
         this._name     = pluginName;
 
         var self          = this
-        ,   $track        = $container.find(".track")        
+        ,   $track        = $container.find(".track")
         ,   $color        = $container.find(".color")
         ,   $canvas       = null
         ,   $colorInput   = $container.find(".colorInput")
@@ -112,7 +112,7 @@
                     {
                         $(document).unbind(".colorpicker");
 
-                        $track.hide();
+                        //$track.hide();
                     });
                 });
 
@@ -130,7 +130,7 @@
 
                             $(document).unbind(".colorpicker");
 
-                            $track.hide();
+                            //$track.hide();
 
                             return false;
                         });
@@ -162,7 +162,7 @@
                     {
                         mouseIsDown = false;
 
-                        $track.hide();
+                        //$track.hide();
 
                         return false;
                     });
