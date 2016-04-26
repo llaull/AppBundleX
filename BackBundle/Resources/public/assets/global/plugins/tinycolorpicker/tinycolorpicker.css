@@ -10,14 +10,14 @@
 /**/
 .TinyColorConteneur .track {
     background:     #EFEFEF url(text-color.png) no-repeat 50% 50%;
-    height:         150px;
-    width:          150px;
-    padding:        10px;
+    height:         90px;
+    width:          90px;
+    padding:        0px;
     position:       absolute;
     cursor:         crosshair;
     float:          left;
     /*left:           -71px;*/
-    /*top:            -71px;*/
+    top:            0px;
     display:        block;
     border:         1px solid #ccc;
     z-index:        10;
@@ -73,4 +73,3 @@
     height: 25px;
     cursor: pointer;
 }
-

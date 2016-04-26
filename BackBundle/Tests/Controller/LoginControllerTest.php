@@ -18,6 +18,7 @@ class LoginControllerTest extends WebTestCase
         $s->logIn($client);
 
         $crawler = $client->request('GET', '/admin/');
+//        var_dump($client->getResponse()->getContent());
 
         $client->click($crawler->selectLink('Home')->link());
 
