@@ -90,6 +90,4 @@ class Description
         $this->name = $name;
     }
 
-
-
 }

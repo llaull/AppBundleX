@@ -89,6 +89,4 @@ class Title
         $this->name = $name;
     }
 
-
-
 }
