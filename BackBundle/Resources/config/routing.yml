@@ -2,4 +2,5 @@ back_office_homepage:
     path:     /
     defaults: { _controller: BackOfficeBundle:Default:index }
 
-
+back_office_user:
+    resource: "@BackOfficeBundle/Resources/config/routing/user.yml"

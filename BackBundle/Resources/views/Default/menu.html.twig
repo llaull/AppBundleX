@@ -1,4 +1,4 @@
-<li class="nav-item start {% if app.request.attributes.get('_route') == 'back_office_homepage' %}active open{% endif %}">
+<li class="nav-item start {% if app.request.attributes.get('_route') == 'back_office_user_index' %}active open{% endif %}">
     <a href="javascript:;" class="nav-link nav-toggle">
         <i class="icon-home"></i>
         <span class="title">Dashboard</span>
@@ -15,6 +15,12 @@
             <a href="{{ path('frond_office_homepage') }}" class="nav-link" target="_blank">
                 <i class="fa fa-object-group"></i>
                 <span class="title">front</span>
+            </a>
+        </li>
+        <li class="nav-item start {% if app.request.attributes.get('_route') == 'back_office_user_index' %}active open{% endif %}">
+            <a href="{{ path('back_office_user_index') }}" class="nav-link">
+                <i class="fa fa-users"></i>
+                <span class="title">Membre</span>
             </a>
         </li>
     </ul>
