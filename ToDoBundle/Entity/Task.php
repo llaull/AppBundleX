@@ -9,6 +9,7 @@
 namespace AppBundle\ToDoBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity
@@ -60,6 +61,12 @@ class Task
      */
     private $user;
 
+    public function __construct()
+    {
+        $this->title = new ArrayCollection();
+        $this->description = new ArrayCollection();
+        $this->tags = new ArrayCollection();
+    }
     /**
      * @return \AppBundle\BackBundle\Entity\User
      */
