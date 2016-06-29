@@ -12,6 +12,7 @@
     {#</form>#}
     {#<!-- END HEADER SEARCH BOX -->#}
     {#<!-- BEGIN GROUP NOTIFICATION -->#}
+    {% if is_granted('ROLE_USER') %}
     <div class="btn-group-notification btn-group" id="header_notification_bar">
         <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
                 data-close-others="true">
@@ -33,5 +34,6 @@
     </div>
     {#<!-- END GROUP NOTIFICATION -->#}
     {% include 'FrondOfficeBundle:MetronicWebApp:body-header-user.html.twig' %}
+    {% endif %}
 </div>
 {#<!-- END TOPBAR ACTIONS -->#}
