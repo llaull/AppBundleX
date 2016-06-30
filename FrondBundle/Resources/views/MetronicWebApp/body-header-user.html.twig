@@ -1,7 +1,7 @@
 {% trans_default_domain 'AppBundleMessage' %}
 
 {# gestion des avatars #}
-{% if app.user.avatar is defined %}
+{% if app.user.avatar is defined and app.user.avatar != "" %}
     {% if app.user.avatar is defined %}
         {% set avatar = app.user.avatar %}
     {% endif %}
@@ -20,6 +20,10 @@
 
         {% if is_granted('ROLE_USER') %}
         <li>
+            <a href="{{ path('back_office_homepage') }}">
+                <i class="icon-home"></i> {{ 'Dashboard'|trans }}
+            </a>
+        </li>        <li>
             <a href="{{ path('fos_user_profile_show') }}">
                 <i class="icon-user"></i> {{ 'My Profile'|trans }}
             </a>
