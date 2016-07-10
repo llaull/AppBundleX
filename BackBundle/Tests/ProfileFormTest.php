@@ -23,7 +23,7 @@ class ProfileFormTest extends WebTestCase
 
 //        var_dump($client->getResponse()->getContent());
 
-        $form = $crawler->selectButton('Create')->form(array(
+        $form = $crawler->selectButton('Save')->form(array(
             'rest_user_profile[firstname]'  => 'plup',
             'rest_user_profile[lastname]'  => 'plap',
             'rest_user_profile[email]' => 'plup@gmail.com',
@@ -34,7 +34,7 @@ class ProfileFormTest extends WebTestCase
         $crawler = $client->followRedirect();
 
         // Check data in the show view
-        $this->assertGreaterThan(0, $crawler->filter('p:contains("plup@gmail.com")')->count(), 'Missing element td:contains("test")');
+        $this->assertGreaterThan(0, $crawler->filter('div:contains("plup@gmail.com")')->count(), 'Missing element td:contains("test")');
 
     }
 }
