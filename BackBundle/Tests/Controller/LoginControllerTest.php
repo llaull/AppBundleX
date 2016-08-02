@@ -17,12 +17,10 @@ class LoginControllerTest extends WebTestCase
 
         $crawler = $client->request('GET', '/login');
         $form = $crawler->selectButton('_submit')->form(array(
-            '_username' => "e",
-            '_password' => "e",
+            '_username' => "test",
+            '_password' => "test",
         ));
         $client->submit($form);
-
-//        var_dump($client->getResponse()->getContent());
 
         $this->assertTrue($client->getResponse()->isRedirect());
 
