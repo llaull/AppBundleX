@@ -16,8 +16,6 @@ class LoggService extends WebTestCase{
         ));
         $client->submit($form);
 
-//        var_dump($client->getResponse()->getContent());
-
         $this->assertTrue($client->getResponse()->isRedirect());
     }
 }
