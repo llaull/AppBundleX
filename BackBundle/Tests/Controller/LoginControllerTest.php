@@ -14,13 +14,17 @@ class LoginControllerTest extends WebTestCase
         $container = $kernel->getContainer();
 
         $client = static::createClient();
-        $s = $container->get('back_office.loging');
-        $s->logIn($client);
 
-        $crawler = $client->request('GET', '/admin/');
+        $crawler = $client->request('GET', '/login');
+        $form = $crawler->selectButton('_submit')->form(array(
+            '_username' => "e",
+            '_password' => "e",
+        ));
+        $client->submit($form);
+
 //        var_dump($client->getResponse()->getContent());
 
-        $client->click($crawler->selectLink('Home')->link());
+        $this->assertTrue($client->getResponse()->isRedirect());
 
     }
 }
