@@ -94,7 +94,8 @@
 {#<!-- BEGIN LOGO -->#}
 <div class="logo">
     <a href="{{ path('frond_office_homepage') }}">
-        <img src="{{ absolute_url(asset('images/5152bca.png')) }}" alt="logo" class="logo-default"/>
+        {#<img src="{{ absolute_url(asset('images/5152bca.png')) }}" alt="logo" class="logo-default"/>#}
+        {% include ':default:appBackLogo.html.twig' %}
     </a>
 </div>
 {#<!-- END LOGO -->#}
