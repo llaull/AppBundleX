@@ -5,9 +5,7 @@
         {#<!-- BEGIN LOGO -->#}
         <div class="page-logo">
             <a href="{{ path('back_office_homepage') }}">
-                {% image '@BackOfficeBundle/Resources/public/images/logo.png' %}
-                <img src="{{ asset_url }}" alt="logo" class="logo-default"/>
-                {% endimage %}
+                {% include ':default:appBackLogo.html.twig' %}
             </a>
 
             <div class="menu-toggler sidebar-toggler"></div>

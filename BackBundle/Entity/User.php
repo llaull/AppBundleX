@@ -34,7 +34,7 @@ class User extends BaseUser
      * @var string
      * @ORM\Column(name="avatar", type="string", length=250, nullable=true)
      */
-    protected $avatar = 'myDefaultValue';
+    protected $avatar;
 
     public function __construct()
     {

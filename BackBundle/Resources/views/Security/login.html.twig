@@ -11,7 +11,7 @@
 {#<!-- BEGIN HEAD -->#}
 <head>
     <meta charset="utf-8"/>
-    <title>Back Office | Admin Login </title>
+    <title>{{ global.nom }} BackOffice | {{ 'login'|trans }} </title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
     {#<!-- BEGIN GLOBAL MANDATORY STYLES -->#}
@@ -94,9 +94,8 @@
 {#<!-- BEGIN LOGO -->#}
 <div class="logo">
     <a href="{{ path('frond_office_homepage') }}">
-        {% image '@BackOfficeBundle/Resources/public/assets/layouts/layout/img/logo.png' %}
-        <img src="{{ asset_url }}" alt="logo" class="logo-default"/>
-        {% endimage %} </a>
+        <img src="{{ absolute_url(asset('images/5152bca.png')) }}" alt="logo" class="logo-default"/>
+    </a>
 </div>
 {#<!-- END LOGO -->#}
 {#<!-- BEGIN LOGIN -->#}
