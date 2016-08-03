@@ -13,7 +13,7 @@ fm_elfinder:
     assets_path: '/assets'
     instances:
         form:
-            locale: %locale% # defaults to current request locale
+            locale: '%locale%' # defaults to current request locale
             editor: form # other choices are tinymce or simple, and form
             fullscreen: true # defaults true, applies to simple and ckeditor editors
             include_assets: true # disable if you want to handle loading of the javascript and css assets yourself
@@ -26,7 +26,7 @@ fm_elfinder:
                         upload_allow: ['all']
                         upload_max_size: 8M
         ckeditor:
-            locale: %locale% # defaults to current request locale
+            locale: '%locale%' # defaults to current request locale
             editor: ckeditor # other options are tinymce, tinymce4, form, custom and simple
             fullscreen: true # defaults true, applies to simple and ckeditor editors
             theme: smoothness # jquery theme
