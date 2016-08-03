@@ -6,6 +6,6 @@ services:
     back_office.form.profile:
        class: AppBundle\BackBundle\Form\Type\ProfileFormType
        arguments:
-            - "%fos_user.model.user.class%"
+            - '%fos_user.model.user.class%'
        tags:
             - { name: form.type, alias: rest_user_profile }

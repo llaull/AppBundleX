@@ -1,8 +1,8 @@
 security:
     encoders:
         FOS\UserBundle\Model\UserInterface:
-                    algorithm: %fos.algorithm%
-                    iterations: %fos.iterations%
+                    algorithm: '%fos.algorithm%'
+                    iterations: '%fos.iterations%'
                     encode_as_base64: true
 
     role_hierarchy:
