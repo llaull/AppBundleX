@@ -21,9 +21,7 @@ class ProfileFormTest extends WebTestCase
         $crawler = $client->request('GET', '/profile/edit');
         $this->assertEquals(200, $client->getResponse()->getStatusCode(), "Unexpected HTTP status code for GET /profile/edit");
 
-//        var_dump($client->getResponse()->getContent());
-
-        $form = $crawler->selectButton('Save')->form(array(
+        $form = $crawler->selectButton('Sauvegarder')->form(array(
             'rest_user_profile[firstname]'  => 'plup',
             'rest_user_profile[lastname]'  => 'plap',
             'rest_user_profile[email]' => 'plup@gmail.com',
