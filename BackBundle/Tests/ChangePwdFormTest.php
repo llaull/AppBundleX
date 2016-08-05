@@ -31,7 +31,7 @@ class ChangePwdFormTest extends WebTestCase
         $crawler = $client->followRedirect();
 
         // Check data in the show view
-        $this->assertGreaterThan(0, $crawler->filter('div:contains("plup@gmail.com")')->count(), 'Missing element td:contains("test")');
+        $this->assertGreaterThan(0, $crawler->filter('div:contains("test")')->count(), 'Missing element div:contains("test")');
 
     }
 }
