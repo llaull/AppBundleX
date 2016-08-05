@@ -22,17 +22,17 @@ class ProfileFormTest extends WebTestCase
         $this->assertEquals(200, $client->getResponse()->getStatusCode(), "Unexpected HTTP status code for GET /profile/edit");
 
         $form = $crawler->selectButton('Sauvegarder')->form(array(
-            'rest_user_profile[firstname]'  => 'plup',
-            'rest_user_profile[lastname]'  => 'plap',
-            'rest_user_profile[email]' => 'plup@gmail.com',
-            'rest_user_profile[current_password]'  => 'test',
+            'rest_user_profile[firstname]'  => 'firstname',
+            'rest_user_profile[lastname]'  => 'lastname',
+            'rest_user_profile[email]' => 'email@gmail.com',
+            'rest_user_profile[current_password]'  => 'password',
         ));
 
         $client->submit($form);
         $crawler = $client->followRedirect();
 
         // Check data in the show view
-        $this->assertGreaterThan(0, $crawler->filter('div:contains("plup@gmail.com")')->count(), 'Missing element td:contains("test")');
+        $this->assertGreaterThan(0, $crawler->filter('div:contains("email@gmail.com")')->count(), 'Missing element div:contains("email@gmail.com")');
 
     }
 }

@@ -22,7 +22,7 @@ class ChangePwdFormTest extends WebTestCase
         $this->assertEquals(200, $client->getResponse()->getStatusCode(), "Unexpected HTTP status code for GET /profile/edit");
 
         $form = $crawler->selectButton('Sauvegarder')->form(array(
-            'fos_user_change_password_form[current_password]'  => 'test',
+            'fos_user_change_password_form[current_password]'  => 'password',
             'fos_user_change_password_form[plainPassword][first]'  => 'test',
             'fos_user_change_password_form[plainPassword][second]'  => 'test',
         ));
