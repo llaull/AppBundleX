@@ -25,7 +25,7 @@ class ProfileFormTest extends WebTestCase
             'rest_user_profile[firstname]'  => 'firstname',
             'rest_user_profile[lastname]'  => 'lastname',
             'rest_user_profile[email]' => 'email@gmail.com',
-            'rest_user_profile[current_password]'  => 'password',
+            'rest_user_profile[current_password]'  => 'test',
         ));
 
         $client->submit($form);

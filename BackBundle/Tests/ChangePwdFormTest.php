@@ -22,7 +22,7 @@ class ChangePwdFormTest extends WebTestCase
         $this->assertEquals(200, $client->getResponse()->getStatusCode(), "Unexpected HTTP status code for GET /profile/edit");
 
         $form = $crawler->selectButton('Sauvegarder')->form(array(
-            'fos_user_change_password_form[current_password]'  => 'password',
+            'fos_user_change_password_form[current_password]'  => 'test',
             'fos_user_change_password_form[plainPassword][first]'  => 'test',
             'fos_user_change_password_form[plainPassword][second]'  => 'test',
         ));
@@ -31,7 +31,7 @@ class ChangePwdFormTest extends WebTestCase
         $crawler = $client->followRedirect();
 
         // Check data in the show view
-        $this->assertGreaterThan(0, $crawler->filter('div:contains("test")')->count(), 'Missing element div:contains("test")');
+        $this->assertGreaterThan(0, $crawler->filter('div:contains("plup@gmail.com")')->count(), 'Missing element td:contains("test")');
 
     }
 }

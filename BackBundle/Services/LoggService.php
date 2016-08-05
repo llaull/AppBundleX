@@ -7,7 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class LoggService extends WebTestCase{
 
-    public function logIn($client, $username = 'login', $password = 'password')
+    public function logIn($client, $username = 'test', $password = 'test')
     {
         $crawler = $client->request('GET', '/login');
         $form = $crawler->selectButton('_submit')->form(array(
