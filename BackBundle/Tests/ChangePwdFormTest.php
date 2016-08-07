@@ -32,7 +32,7 @@ class ChangePwdFormTest extends WebTestCase
 
 
         // Check data in the show view
-        $this->assertGreaterThan(0, $crawler->filter('div:contains("email@gmail.com")')->count(), 'Missing element td:contains("email@gmail.com")');
+        $this->assertGreaterThan(0, $crawler->filter('div:contains("test")')->count(), 'Missing element td:contains("test")');
 
     }
 }
