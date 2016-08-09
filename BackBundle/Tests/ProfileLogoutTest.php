@@ -24,8 +24,5 @@ class ProfileLogoutTest extends WebTestCase
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode(), "Unexpected HTTP status code for GET /logout");
 
-
-        //$this->assertEquals(200, $client->getResponse()->getStatusCode(), );
-
     }
 }
