@@ -1,10 +1,10 @@
 <?php
 
-namespace AppBundle\BackBundle\Tests\Controller;
+namespace AppBundle\BackBundle\Tests;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class ProfileFormTest extends WebTestCase
+class ProfileEditTest extends WebTestCase
 {
 
     public function testIndex()
