@@ -66,7 +66,7 @@
       </trans-unit>
       <trans-unit id="de9ced9bf5e9829de4a93ad8c9d7a170" resname="Add New">
         <source>Add New</source>
-        <target state="translated">__Add New</target>
+        <target state="translated">Ajouter</target>
       </trans-unit>
       <trans-unit id="8cf04a9734132302f96da8e113e80ce5" resname="Home">
         <source>Home</source>
