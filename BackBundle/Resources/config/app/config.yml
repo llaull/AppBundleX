@@ -27,6 +27,9 @@ assetic:
         layout6_bg:
             inputs: '%kernel.root_dir%/../src/AppBundle/BackBundle/Resources/public/assets/layouts/layout6/img/bg_01.jpg'
             output: 'assets/layouts/layout6/img/bg_01.jpg'
+        dragIconRoundBig:
+            inputs: '%kernel.root_dir%/../src/AppBundle/BackBundle/Resources/public/assets/global/plugins/amcharts/amcharts/images/dragIconRoundBig.svg'
+            output: 'amcharts/images/dragIconRoundBig.svg'
 
 #       element portlet
         portlet-collapse-icon-white:
