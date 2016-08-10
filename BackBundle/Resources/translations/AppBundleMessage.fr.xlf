@@ -54,11 +54,11 @@
       </trans-unit>
       <trans-unit id="06933067aafd48425d67bcb01bba5cb6" resname="Update">
         <source>Update</source>
-        <target>__Update</target>
+        <target state="translated">Sauvegarder</target>
       </trans-unit>
       <trans-unit id="686e697538050e4664636337cc3b834f" resname="Create">
         <source>Create</source>
-        <target>__Create</target>
+        <target state="translated">Créer</target>
       </trans-unit>
       <trans-unit id="ea4788705e6873b424c65e91c2846b19" resname="Cancel">
         <source>Cancel</source>
@@ -90,11 +90,11 @@
       </trans-unit>
       <trans-unit id="3903aab323863bd2e9b68218a7a65ebd" resname="Follow">
         <source>Follow</source>
-        <target state="translated">__Follow</target>
+        <target state="translated">Suivre</target>
       </trans-unit>
       <trans-unit id="4c2a8fe7eaf24721cc7a9f0175115bd4" resname="Message">
         <source>Message</source>
-        <target state="translated">__Message</target>
+        <target state="translated">Message</target>
       </trans-unit>
       <trans-unit id="ff73074ccafb0bcfc1c49a09ceb6532f" resname="Account Settings">
         <source>Account Settings</source>
@@ -130,7 +130,7 @@
       </trans-unit>
       <trans-unit id="de95b43bceeb4b998aed4aed5cef1ae7" resname="edit">
         <source>edit</source>
-        <target state="translated">__edit</target>
+        <target state="translated">Editer</target>
       </trans-unit>
       <trans-unit id="e9ade8c73d8a8ea7b6f53956dc36608b" resname="registration.check_email">
         <source>registration.check_email</source>
