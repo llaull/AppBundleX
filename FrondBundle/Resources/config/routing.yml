@@ -2,9 +2,3 @@ frond_office_homepage:
     path:     /
     defaults: { _controller: FrondOfficeBundle:Default:index }
 
-# WYSIWYG
-elfinder:
-     resource: "@FMElfinderBundle/Resources/config/routing.yml"
-
-fos_user:
-    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
