@@ -13,19 +13,27 @@ use Doctrine\ORM\EntityManager;
 class AppOptionsService
 {
 
-    private $em;
     private $options;
+    private $em;
 
-    public function __construct(EntityManager $em)
+    public function __construct(EntityManager $entityManager)
     {
-        $this->em = $em;
+        $this->em = $entityManager;
 
-        $opt = $em->getRepository('BackOfficeBundle:Options')->findAll();
+        try {
 
-        $this->options = $opt;
+            $opt = $entityManager->getRepository('BackOfficeBundle:Options')->findAll();
+            $this->options = $opt;
+
+        } catch (\Doctrine\DBAL\Exception\TableNotFoundException $e) {
+            $this->options = 'error';
+
+        }
+
     }
 
-    public function getOptionName($name){
+    public function getOptionName($name)
+    {
         foreach ($this->options as $opt) {
             if ($opt->getName() == $name) {
                 return $opt;

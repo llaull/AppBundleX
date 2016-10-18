@@ -3,7 +3,7 @@ services:
         class: AppBundle\BackBundle\Services\LoggService
         arguments: ["@service_container"]
 
-    back_office.options:
+    app.options:
         class: AppBundle\BackBundle\Services\AppOptionsService
         arguments: ["@doctrine.orm.entity_manager"]
 
